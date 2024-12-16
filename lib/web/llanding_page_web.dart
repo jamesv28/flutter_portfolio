@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({super.key});
@@ -10,6 +11,12 @@ class LandingPageWeb extends StatefulWidget {
 class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const TabsWeb(),
+        elevation: 0.0,
+        backgroundColor: Colors.black,
+      ),
+    );
   }
 }

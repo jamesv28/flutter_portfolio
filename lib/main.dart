@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/mobile/landing_page_mobile.dart';
+import 'package:portfolio/web/llanding_page_web.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth > 800) {
+            return const LandingPageWeb();
+          } else {
+            return const LandingPageMobile();
+          }
+        },
+      ),
+    );
   }
 }
