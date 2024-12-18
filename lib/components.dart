@@ -31,7 +31,7 @@ class _TabsWebState extends State<TabsWeb> {
                 fontSize: 30.0,
                 decoration: TextDecoration.underline,
                 decorationThickness: 2,
-                decorationColor: Colors.white)
+                decorationColor: Colors.tealAccent)
             : GoogleFonts.rethinkSans(
                 color: Colors.white,
                 fontSize: 28.0,
