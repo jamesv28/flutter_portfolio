@@ -45,3 +45,34 @@ class _TabsWebState extends State<TabsWeb> {
     );
   }
 }
+
+class SansBold extends StatelessWidget {
+  final String text;
+  final double size;
+  const SansBold(this.text, this.size, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style:
+          GoogleFonts.albertSans(fontSize: size, fontWeight: FontWeight.bold),
+    );
+  }
+}
+
+class SansText extends StatelessWidget {
+  final String text;
+  final double size;
+  const SansText(this.text, this.size, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.albertSans(
+        fontSize: size,
+      ),
+    );
+  }
+}
