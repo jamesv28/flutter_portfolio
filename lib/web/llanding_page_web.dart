@@ -206,7 +206,34 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 ),
               ],
             ),
-          )
+          ),
+          // third section
+          SizedBox(
+            height: deviceHeight / 1.3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const SansBold("What I do?", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Card(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            "assets/images/webL.png",
+                            height: 200,
+                            width: 200,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
