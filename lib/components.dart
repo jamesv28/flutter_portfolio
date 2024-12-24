@@ -76,3 +76,53 @@ class SansText extends StatelessWidget {
     );
   }
 }
+
+class TextForm extends StatelessWidget {
+  final String heading;
+  final double width;
+  final String hintText;
+  final int maxLines;
+  const TextForm(
+      {super.key,
+      required this.heading,
+      required this.width,
+      required this.hintText,
+      required this.maxLines});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          width: width,
+          child: TextFormField(
+            maxLines: maxLines,
+            decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Colors.teal,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Colors.tealAccent,
+                    width: 2.0,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                labelText: heading,
+                labelStyle: const TextStyle(
+                  color: Colors.teal,
+                ),
+                hintText: hintText,
+                hintStyle: GoogleFonts.poppins(
+                  fontSize: 14.0,
+                )),
+          ),
+        )
+      ],
+    );
+  }
+}

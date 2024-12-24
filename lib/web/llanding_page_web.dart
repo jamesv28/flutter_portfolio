@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
 class LandingPageWeb extends StatefulWidget {
@@ -218,19 +219,128 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Card(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            "assets/images/webL.png",
-                            height: 200,
-                            width: 200,
-                          ),
-                        ],
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      shadowColor: Colors.tealAccent,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/images/webL.png",
+                              height: 200,
+                              width: 200,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const SansBold("Web Development", 15),
+                          ],
+                        ),
+                      ),
+                    ),
+                    // second card
+                    Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      shadowColor: Colors.tealAccent,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/images/app.png",
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.contain,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const SansBold("App Development", 15),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 30,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      shadowColor: Colors.tealAccent,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "assets/images/firebase.png",
+                              height: 200,
+                              width: 200,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const SansBold("Back End Development", 15),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
+              ],
+            ),
+          ),
+          // fourth section
+          SizedBox(
+            height: deviceHeight,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const SansBold("Contact Me Here", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: 350,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Colors.teal,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                    color: Colors.tealAccent,
+                                    width: 2.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                labelText: "Name",
+                                labelStyle: const TextStyle(
+                                  color: Colors.teal,
+                                ),
+                                hintText: "Please enter your first name",
+                                hintStyle: GoogleFonts.poppins(
+                                  fontSize: 14.0,
+                                )),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                )
               ],
             ),
           ),
