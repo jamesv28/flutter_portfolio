@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
 class LandingPageWeb extends StatefulWidget {
@@ -13,6 +12,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
+    var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       drawer: const Drawer(),
@@ -304,43 +304,55 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const SansBold("Contact Me Here", 40),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Column(
                       children: [
-                        SizedBox(
+                        TextForm(
+                          heading: "Name",
                           width: 350,
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Colors.teal,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: const BorderSide(
-                                    color: Colors.tealAccent,
-                                    width: 2.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                labelText: "Name",
-                                labelStyle: const TextStyle(
-                                  color: Colors.teal,
-                                ),
-                                hintText: "Please enter your first name",
-                                hintStyle: GoogleFonts.poppins(
-                                  fontSize: 14.0,
-                                )),
-                          ),
-                        )
+                          hintText: "Enter your name",
+                          maxLines: 1,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        TextForm(
+                          heading: "Email",
+                          width: 350,
+                          hintText: "Enter Your Email",
+                          maxLines: 1,
+                        ),
                       ],
                     ),
+                    Column(
+                      children: [
+                        TextForm(
+                          heading: "Last Name",
+                          width: 350,
+                          hintText: "Enter your Last Name",
+                          maxLines: 1,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        TextForm(
+                          heading: "Phone",
+                          width: 350,
+                          hintText: "Enter your Phone Number",
+                          maxLines: 1,
+                        ),
+                      ],
+                    )
                   ],
-                )
+                ),
+                TextForm(
+                  heading: "Message",
+                  width: deviceWidth / 1.5,
+                  hintText: "Enter your message here",
+                  maxLines: 10,
+                ),
               ],
             ),
           ),
