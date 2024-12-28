@@ -96,6 +96,12 @@ class TextForm extends StatelessWidget {
       child: TextFormField(
         maxLines: maxLines,
         decoration: InputDecoration(
+            focusedErrorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                color: Colors.red,
+                width: 1.0,
+              ),
+            ),
             enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
                 color: Colors.teal,
@@ -115,7 +121,7 @@ class TextForm extends StatelessWidget {
               color: Colors.teal,
             ),
             hintText: hintText,
-            hintStyle: GoogleFonts.poppins(
+            hintStyle: GoogleFonts.albertSans(
               fontSize: 14.0,
             )),
       ),

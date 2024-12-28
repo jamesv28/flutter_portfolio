@@ -311,7 +311,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: [
                         TextForm(
                           heading: "Name",
-                          width: 350,
+                          width: 350.0,
                           hintText: "Enter your name",
                           maxLines: 1,
                         ),
@@ -320,7 +320,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         ),
                         TextForm(
                           heading: "Email",
-                          width: 350,
+                          width: 350.0,
                           hintText: "Enter Your Email",
                           maxLines: 1,
                         ),
@@ -330,7 +330,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       children: [
                         TextForm(
                           heading: "Last Name",
-                          width: 350,
+                          width: 350.0,
                           hintText: "Enter your Last Name",
                           maxLines: 1,
                         ),
@@ -339,7 +339,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         ),
                         TextForm(
                           heading: "Phone",
-                          width: 350,
+                          width: 350.0,
                           hintText: "Enter your Phone Number",
                           maxLines: 1,
                         ),
@@ -352,6 +352,20 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   width: deviceWidth / 1.5,
                   hintText: "Enter your message here",
                   maxLines: 10,
+                ),
+                MaterialButton(
+                  onPressed: () {},
+                  elevation: 20,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  height: 60.0,
+                  minWidth: 200.0,
+                  color: Colors.teal,
+                  child: const SansBold("Submit", 20.0),
+                ),
+                const SizedBox(
+                  height: 20.0,
                 ),
               ],
             ),
