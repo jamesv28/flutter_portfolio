@@ -144,11 +144,13 @@ class AnimatedCardWeb extends StatefulWidget {
 
 class _AnimatedCardWebState extends State<AnimatedCardWeb>
     with SingleTickerProviderStateMixin {
+  // ignore: prefer_final_fields
   late AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 4),
   )..repeat(reverse: true);
 
+  // ignore: prefer_final_fields
   late Animation<Offset> _animation = Tween(
     begin: widget.reverse == true ? const Offset(0, 0.08) : Offset.zero,
     end: widget.reverse == true ? Offset.zero : const Offset(0, 0.08),

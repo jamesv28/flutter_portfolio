@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({super.key});
@@ -15,7 +16,40 @@ class _LandingPageWebState extends State<LandingPageWeb> {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        backgroundColor: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              backgroundColor: Colors.teal,
+              radius: 72.0,
+              child: CircleAvatar(
+                radius: 70.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("assets/images/james.jpeg"),
+              ),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            SansBold("James Volmert", 25.0),
+            SizedBox(
+              height: 15.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(
+                  FontAwesomeIcons.linkedin,
+                  color: Colors.teal,
+                  size: 16.0,
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         elevation: 0.0,
         iconTheme: const IconThemeData(
@@ -127,7 +161,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   children: [
                     Image.asset(
                       "assets/images/web.jpg",
-                      height: deviceHeight / 1.7,
+                      height: deviceWidth / 2.0,
                     ),
                   ],
                 ),
