@@ -211,86 +211,27 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           // third section
           SizedBox(
             height: deviceHeight / 1.3,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const SansBold("What I do?", 40),
+                SansBold("What I do?", 40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      shadowColor: Colors.tealAccent,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "assets/images/webL.png",
-                              height: 200,
-                              width: 200,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const SansBold("Web Development", 15),
-                          ],
-                        ),
-                      ),
-                    ),
+                    AnimatedCardWeb(
+                        imagePath: "assets/images/app.png",
+                        text: "App Development",
+                        fit: BoxFit.contain,
+                        reverse: true),
                     // second card
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      shadowColor: Colors.tealAccent,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "assets/images/app.png",
-                              height: 200,
-                              width: 200,
-                              fit: BoxFit.contain,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const SansBold("App Development", 15),
-                          ],
-                        ),
-                      ),
+                    AnimatedCardWeb(
+                      imagePath: "assets/images/web.jpg",
+                      text: "Web Development",
                     ),
-                    Card(
-                      elevation: 30,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      shadowColor: Colors.tealAccent,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "assets/images/firebase.png",
-                              height: 200,
-                              width: 200,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const SansBold("Back End Development", 15),
-                          ],
-                        ),
-                      ),
+
+                    AnimatedCardWeb(
+                      imagePath: "assets/images/webL.png",
+                      text: "Backend Development",
                     ),
                   ],
                 ),
