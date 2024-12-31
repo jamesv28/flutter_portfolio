@@ -43,7 +43,22 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Icon(
                   FontAwesomeIcons.linkedin,
                   color: Colors.teal,
-                  size: 16.0,
+                  size: 35.0,
+                ),
+                Icon(
+                  FontAwesomeIcons.github,
+                  color: Colors.teal,
+                  size: 35.0,
+                ),
+                Icon(
+                  FontAwesomeIcons.briefcase,
+                  color: Colors.teal,
+                  size: 35.0,
+                ),
+                Icon(
+                  FontAwesomeIcons.envelope,
+                  color: Colors.teal,
+                  size: 35.0,
                 )
               ],
             ),
