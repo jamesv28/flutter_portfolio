@@ -16,12 +16,12 @@ class _LandingPageWebState extends State<LandingPageWeb> {
     var deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: const Drawer(
+      drawer: Drawer(
         backgroundColor: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               backgroundColor: Colors.teal,
               radius: 72.0,
               child: CircleAvatar(
@@ -30,36 +30,48 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 backgroundImage: AssetImage("assets/images/james.jpeg"),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
-            SansBold("James Volmert", 25.0),
-            SizedBox(
+            const SansBold("James Volmert", 25.0),
+            const SizedBox(
               height: 15.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Icon(
-                  FontAwesomeIcons.linkedin,
-                  color: Colors.teal,
-                  size: 35.0,
+                IconButton(
+                  icon: const Icon(
+                    FontAwesomeIcons.linkedin,
+                    color: Colors.teal,
+                    size: 35.0,
+                  ),
+                  onPressed: () {},
                 ),
-                Icon(
-                  FontAwesomeIcons.github,
-                  color: Colors.teal,
-                  size: 35.0,
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    FontAwesomeIcons.github,
+                    color: Colors.teal,
+                    size: 35.0,
+                  ),
                 ),
-                Icon(
-                  FontAwesomeIcons.briefcase,
-                  color: Colors.teal,
-                  size: 35.0,
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    FontAwesomeIcons.briefcase,
+                    color: Colors.teal,
+                    size: 35.0,
+                  ),
                 ),
-                Icon(
-                  FontAwesomeIcons.envelope,
-                  color: Colors.teal,
-                  size: 35.0,
-                )
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    FontAwesomeIcons.envelope,
+                    color: Colors.teal,
+                    size: 35.0,
+                  ),
+                ),
               ],
             ),
           ],
